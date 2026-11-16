@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+      <form name="myForm" action="abc.php"
+      onsubmit="return Validateform()">
+       
+      <h3>Email Validation</h3>
+
+      <label>Email</label>
+      <input type="text" name="fEmail">
+      <input type="submit" value="register">
+    </form>
+</body>
+     <script>
+         function Validateform(){
+          let Email=document.myForm.fEmail.value.trim();
+          let pattern=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+          if(Email==""){
+            alert("Email cannot be empty")
+            document.myForm.fEmail.focus();
+            return false;
+          }
+          else if(!(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/).test(Email)){
+            alert("Email is Invalid")
+            document.myForm.fEmail.focus();
+            return false;
+          }
+          else{
+            alert("Email is valid")
+          }
+         }
+     </script>
+</html>
