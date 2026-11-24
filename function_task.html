@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+     <h1>Function Task</h1>
+</body>
+<script>
+       // additon number
+
+       function addNumbers(){
+        let N1=Number(prompt("Enter the num1 :"));
+        let N2=Number(prompt("Enter the num2 :"));
+         return N1+N2;
+       }
+      let result=addNumbers();
+      console.log("Addition: ",result);
+    
+
+         // checkEven or Odd
+
+       function checkEvenOdd(){
+         let num=Number(prompt("check the number EvenORodd :"));
+         if(num%2==0){
+          console.log("Num is Even")
+         }
+         else{
+          console.log("Num is Odd")
+         }
+
+       }
+       checkEvenOdd();
+      
+       function Largestnum(){
+        let a=Number(prompt("Enter the num1 :"));
+        let b=Number(prompt("Enter the num2 :"));
+        let c=Number(prompt("Enter the num3 :"));
+           
+
+        if(a>b && a>c)
+        return a;
+        else if(b>a && b>c)
+        return b;
+        else
+        return c;
+       }
+      let largest=Largestnum();
+      console.log("Largest of three num :",largest);
+            
+            
+     function factorial(){
+      let n=Number(prompt("enter the fact Num:"));
+      let fact=1;
+      for(let i=1;i<=n;i++){
+        fact=fact*i;
+
+      }
+      return fact;
+           }
+     let f=factorial();
+     console.log("factorial of: ",f);
+
+
+     function reverseString(){
+      let s=Input(prompt("Enter the Word"));
+      let rev="";
+      for(let i=s.length-1;i>=0;i--){
+        rev= rev+s[i];
+      }
+      return rev;
+     }
+     let reverse=reverseString();
+     console.log("reverse : ",reverse);
+
+
+     function countVowels(str){
+       let count =0;
+       for(let i=0;i<str.length;i++){
+        let ch=str[i].yoLowerCase();
+        if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u'){
+          count++;
+        }
+       }
+       return count;
+     }
+     
+     let  result1=couuntVowels(prompt("Enter a String:"));
+
+     console.log("Number of Vowels: ", result);
+</script>
+</html>
